@@ -1,0 +1,7 @@
+.carousal-container{
+    max-height: 100vh;
+}
+.carousal-container img{
+    max-height: calc(100vh - 40px);
+    object-fit: cover;
+}

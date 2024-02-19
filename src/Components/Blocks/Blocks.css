@@ -1,0 +1,10 @@
+.home-box-2 img{
+    height: 50px;
+    margin-block: 1rem;
+}
+.home-box-2 p{
+    font-weight: lighter;
+}
+.home-box-2 h3{
+    color: var(--brand-dark);
+}

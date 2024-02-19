@@ -1,0 +1,28 @@
+.left-image{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    position: relative;
+    background-color: black;
+}
+
+.row{
+    width: 900px;
+    min-height: 450px;
+    border-radius: 10px;
+    background-color: #ffff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}
+.left-image p {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: var(--brand-white);
+    text-wrap: wrap;
+    text-align: center;
+    font-size: large;
+    font-weight: 700;
+}

@@ -1,0 +1,45 @@
+
+.navbar-toggler:focus{
+
+    box-shadow: none !important;
+}
+.navbar
+{
+    padding: 0;
+    background-color: var(--brand-light) !important;
+}
+.nav-item{
+
+    color: var(--brand-dark);
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-inline: 1rem;
+}
+.nav-item:hover{
+    background-color: var(--brand-green);
+    color:var(--brand-white);
+    border-bottom:2px solid var(--brand-white);
+    cursor: pointer;
+
+}
+.navbar-collapse{
+    min-height: 40px !important;
+}
+.navbar-collapse  li{
+    height: 40px;
+    
+}
+.navbar-brand{
+    color: var(--brand-dark);
+    font-style: oblique;
+    font-variant: small-caps;
+}
+.navbar-brand img{
+    height: 20px;
+}
+.user-drop-down{
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
