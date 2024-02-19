@@ -6,12 +6,15 @@ import Loader from './Components/Common/Loader/Loader';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 import Routing from './Components/Routing';
+import { useSelector } from 'react-redux';
 
 function App() {
+  const {showLoader}=useSelector(store=>store.general)
+  console.log({showLoader});
   return (
 <>
 <ToastContainer />
-{/* <Loader/> */}
+{showLoader && <Loader/>}
 <Routing/>
 </>
   );
