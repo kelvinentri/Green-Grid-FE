@@ -1,7 +1,11 @@
 import React from 'react'
 import './CusNavBar.css'
 import games from '../../../assets/running.png'
+import { useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 function CusNavBar() {
+  const {user} =useSelector(state=>state.user)
+  const navigate=useNavigate()
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
     <div className="container-fluid">
@@ -11,22 +15,25 @@ function CusNavBar() {
       </button>
       <div className="collapse navbar-collapse" id="navbarText">
         <ul className="navbar-nav me-auto  mb-lg-0">
-          <li className="nav-item">
+          <li className="nav-item" onClick={()=>navigate('/home')}>
          Home
           </li>
-          <li className="nav-item">
-          Features
+         {user.role===1 && <li className="nav-item" onClick={()=>navigate('/newcourt')}>
+          Add new Court
+          </li>}
+          <li className="nav-item" onClick={()=>navigate('/courts/courtlist')}>
+       Courts
           </li>
         </ul>
 
         <div className="nav-item dropdown">
           <span className="nav-link dropdown-toggle user-drop-down"  id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="true">
-         user
+         {user.firstName+" " +user.lastName}
           </span>
           <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-            <li><span className="dropdown-item" >Action</span></li>
-            <li><span className="dropdown-item" >Another action</span></li>
-            <li><span className="dropdown-item" >Something else here</span></li>
+            <li><span className="dropdown-item" >Profile</span></li>
+            {/* <li><span className="dropdown-item" >Another action</span></li> */}
+            <li><span className="dropdown-item" >Logout</span></li>
           </ul>
         </div>
 
