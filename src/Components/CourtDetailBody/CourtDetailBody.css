@@ -1,0 +1,81 @@
+.details-page{
+    height: calc(100vh - 43px);
+}
+.details-image-box{
+    position: relative;
+height: 100%;
+}
+.details-main-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.details-image-content{
+    position: absolute;
+    height: 15rem;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 15%, rgba(0, 0, 0, .01) 92%);
+        width: 100%;
+    inset: auto auto 0rem auto;
+    z-index: 2;
+}
+.details-image-content button{
+    background: transparent;
+    border-radius: 5px;
+    border:1px solid white;
+color: white;
+padding: .3rem 1rem;
+}
+.details-image-content button:active{
+    transform: scale(.99);
+    background-color: var(--brand-green);
+}
+.calender-box{
+    position: fixed;
+    z-index: 1030;
+    background-color: white;
+    top: 30px;
+}
+.modal-close-icon{
+    position: absolute;
+top: 0;
+right: 0;
+transform: translate(50%, -50%);
+background-color:black;
+border-radius: 50%;
+z-index: 5;
+
+}
+.range-label{
+    font-size: smaller;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: .3rem .7rem;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 1rem;
+    border: 1px solid #9e9e9e;
+}
+.timeslot-select-modal{
+    width: 30rem;
+}
+.slot-list{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 2rem;
+    background-color: rgb(255, 255, 255);
+    height: 10rem;
+    border-radius: 10px;
+    border: 1px solid #9e9e9e;
+    padding:0;
+    overflow-y: auto;
+}
+.slot-list li{
+    padding: .5rem 1rem; 
+    border-bottom:  1px solid #9e9e9e;
+    list-style: none;
+    width: 100%;
+    overflow-y: auto;
+    font-size: small;
+}

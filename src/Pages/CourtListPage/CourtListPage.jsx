@@ -4,7 +4,7 @@ import CourtListBody from '../../Components/CourtListBody/CourtListBody'
 
 function CourtListPage() {
   return (
-    <div className='d-flex flex-column vh-100 bg-body-secondary'>
+    <div className='d-flex flex-column vh-100'>
 <CusNavBar/>
 <CourtListBody/>
 
