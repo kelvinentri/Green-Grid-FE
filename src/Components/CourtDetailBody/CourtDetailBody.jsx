@@ -39,8 +39,14 @@ function CourtDetailBody() {
 useEffect(()=>{
   getSingleCourtData()
 },[])
+
 const getSingleCourtData=()=>{
   AxiosInstance.get('/users/getsinglecourtdata',{params:{courtId:id}})
+  // AxiosInstance({
+  //   url:,
+  //   method:'',
+  //   params:{}
+  // })
   .then((resp)=>{
     setCourtData(resp.data)
   })
@@ -77,7 +83,7 @@ const getSingleCourtData=()=>{
     .catch((err)=>{
       console.log(err)
       dispatch(showorhideLoader(false))
-    ErrorToast('court creation failed')
+    ErrorToast(err.response.data?.message)
     })
   }
   return (

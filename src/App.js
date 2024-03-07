@@ -10,7 +10,6 @@ import { useSelector } from 'react-redux';
 
 function App() {
   const {showLoader}=useSelector(store=>store.general)
-  console.log({showLoader});
   return (
 <>
 <ToastContainer />

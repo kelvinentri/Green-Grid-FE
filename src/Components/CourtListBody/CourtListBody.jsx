@@ -22,7 +22,7 @@ ErrorToast('some thing wrong')
   return (
     <div className="court_list_body flex-flex-grow-1 d-flex flex-wrap justify-content-center  overflow-y-auto  gap-3 p-3">
 
-{courtData.map((court)=><Cards court={court}/>)}
+{courtData.map((court,index)=><Cards court={court} key={index}/>)}
 
     </div>
   )
