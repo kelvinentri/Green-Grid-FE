@@ -7,6 +7,7 @@ import "react-quill/dist/quill.snow.css";
 import AxiosInstance from "../../Config/apicall";
 import { ErrorToast, successToast } from "../../Plugins/Toast/Toast";
 import { useNavigate } from "react-router-dom";
+import Modal from "../Common/Modal/Modal";
 
 function AddNewCourtBox() {
   const [courtData, setCourtData] = useState({});

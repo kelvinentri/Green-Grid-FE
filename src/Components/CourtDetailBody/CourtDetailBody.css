@@ -79,3 +79,18 @@ z-index: 5;
     overflow-y: auto;
     font-size: small;
 }
+.availbleslots{
+border: 1px solid var(--brand-green);
+border-radius: 5px;
+color: var(--brand-dark);
+background-color: rgba(129, 202, 129, 0.7);
+cursor: pointer;
+}
+
+.notavaialable{
+  border: 1px solid rgb(184, 184, 184); 
+  border-radius: 5px;
+  color: rgb(184, 184, 184);  
+  background-color:rgb(184, 184, 184, .2);  
+  cursor: not-allowed;
+}
