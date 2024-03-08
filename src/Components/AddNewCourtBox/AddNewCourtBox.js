@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./AddNewCourtBox.css";
 import CustomInput from "../Common/CustomInput/CustomInput";
 import addIcon from "@assets/addicon.svg";
@@ -16,6 +16,9 @@ function AddNewCourtBox() {
   const handlechange = (e) => {
     setCourtData({ ...courtData, [e.target.name]: e.target.value });
   };
+  useEffect(()=>{
+    console.log(selelctedFiles);
+  },[selelctedFiles])
   const handleInputFileChange = (e) => {
     const files = Array.from(e.target.files);
     const validFiles = files.filter((file) => {
@@ -158,10 +161,10 @@ function AddNewCourtBox() {
           {selelctedFiles.map((file, index) => (
             <>
               {file.type.startsWith("image/") && (
-                <img src={URL.createObjectURL(file)} height={150} />
+                <img src={URL.createObjectURL(file)} height={150} key={index} />
               )}
               {file.type.startsWith("video/") && (
-                <video src={URL.createObjectURL(file)} height={150} />
+                <video src={URL.createObjectURL(file)} height={150} key={index} />
               )}
             </>
           ))}
